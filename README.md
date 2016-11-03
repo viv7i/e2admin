@@ -97,8 +97,10 @@ PREPARING APPLICATION
 
 </li>
 <li><p>Create a new database and adjust the <code>components['db']</code> configuration in <code>common/config/main-local.php</code> accordingly.</p></li>
-<li><p>Open a console terminal, apply migrations with command <code>/path/to/php-bin/php /path/to/yii-application/php yii migrate</code>.</p></li>
-<li><p>Open a console terminal, update dependencies with command <code>/path/to/php-bin/php /path/to/yii-application/composer update</code>.</p></li>
+<li><p>Open a console terminal and pull the repository then  apply migrations with command <code>/path/to/php-bin/php /path/to/yii-application/php yii migrate</code>.</p></li>
+<li><p>Now  enable access controls with this migration command <code>/path/to/php-bin/php /path/to/yii-application/php yii migrate --migrationPath=@yii/rbac/migrations
+</code>.</p></li>
+<li><p>And update dependencies with command <code>/path/to/php-bin/php /path/to/yii-application/composer update</code>.</p></li>
 </ol>
 
 CONFIGURATION
