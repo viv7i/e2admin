@@ -67,49 +67,25 @@ environments/            contains environment-based overrides
 REQUIREMENTS
 ----------------------
 
-The minimum requirement by this project template is that your Web server supports PHP 5.4.0.
+The minimum requirement by this project template is Apache Web server that supports PHP 5.4.0.
 
 INSTALLATION
 --------------------
 
-To intalll web framework run following commands in terminal -
+clone this repository using following command -
 <pre>
     <code>
-        composer global require "fxp/composer-asset-plugin:^1.2.0"
-        composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-application
+        git clone <repository name>
     </code>
 </pre>
 
 PREPARING APPLICATION
 -----------------------------------
 <ol>
-<li><p>Open a console terminal, execute the <code>init</code> command and select <code>dev</code> as environment.</p>
-
-<pre><code>
-    /path/to/php-bin/php /path/to/yii-application/init
-</code></pre>
-
-<p>If you automate it with a script you can execute <code>init</code> in non-interactive mode.</p>
-
-<pre><code>
-    /path/to/php-bin/php /path/to/yii-application/init --env=Development --overwrite=All
-</code></pre>
-
+<li><p>Once project has been cloned open terminal and move to your project folder path.<p>
+<p>Run <code>composer install</code> command to install all framework requirement</p>
 </li>
 <li><p>Create a new database and adjust the <code>components['db']</code> configuration in <code>common/config/main-local.php</code> accordingly.</p></li>
-<li><p>Open a console terminal and pull the repository then  apply migrations with command <code>/path/to/php-bin/php /path/to/yii-application/php yii migrate</code>.</p></li>
-<li><p>Now  enable access controls with this migration command <code>/path/to/php-bin/php /path/to/yii-application/php yii migrate --migrationPath=@yii/rbac/migrations
-</code>.</p></li>
-<li><p>And update dependencies with command <code>/path/to/php-bin/php /path/to/yii-application/composer update</code>.</p></li>
+<li><p>Now apply migrations with command <code>php yii migrate</code>.</p></li>
+<li><p>To enable access controls run this migration command <code>php yii migrate --migrationPath=@yii/rbac/migrations</code> followed by <code>php yii rbac/init</code> command.</p></li>
 </ol>
-
-CONFIGURATION
------------------------------------
-
-The project uses following third party modules to enhance the user experience.
-
-<ul>
-<li><a href="https://github.com/wbraganca/yii2-dynamicform">yii2-dynamicform</a><p>To use add this line to composer.json file's require section </p><code>"wbraganca/yii2-dynamicform": "*"</code></li>
-<li><a href="https://github.com/yiidoc/yii2-redactor">yii2-redactor</a><p>To use add this line to composer.json file's require section </p><code> "yiidoc/yii2-redactor": "*"</code></li>
-<li><a href="https://github.com/kartik-v/yii2-widget-datepicker">yii2-widget-datepicker</a><p>To use add this line to composer.json file's require section </p><code>"kartik-v/yii2-widget-datepicker": "@dev"</code></li>
-</ul>
