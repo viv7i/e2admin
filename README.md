@@ -75,7 +75,7 @@ INSTALLATION
 clone this repository using following command -
 <pre>
     <code>
-        git clone <repository name>
+        git clone [repository name]
     </code>
 </pre>
 
