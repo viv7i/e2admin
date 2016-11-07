@@ -75,7 +75,7 @@ INSTALLATION
 clone this repository using following command -
 <pre>
     <code>
-        git clone [repository name]
+        git clone <repository name>
     </code>
 </pre>
 
@@ -85,6 +85,9 @@ PREPARING APPLICATION
 <li><p>Once project has been cloned open terminal and move to your project folder path.<p>
 <p>Run <code>composer install</code> command to install all framework requirement</p>
 </li>
+<li><p>Then execute the init command and select dev as environment.</p>
+<pre><code>php init
+</code></pre></li>
 <li><p>Create a new database and adjust the <code>components['db']</code> configuration in <code>common/config/main-local.php</code> accordingly.</p></li>
 <li><p>Now apply migrations with command <code>php yii migrate</code>.</p></li>
 <li><p>To enable access controls run this migration command <code>php yii migrate --migrationPath=@yii/rbac/migrations</code> followed by <code>php yii rbac/init</code> command.</p></li>
